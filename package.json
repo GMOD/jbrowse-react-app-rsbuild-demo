@@ -1,0 +1,32 @@
+{
+  "name": "rsbuild-jbrowse-react-app",
+  "type": "module",
+  "version": "0.0.0",
+  "license": "MIT",
+  "scripts": {
+    "dev": "rsbuild dev --open",
+    "build": "rsbuild build",
+    "preview": "rsbuild preview",
+    "predeploy": "npm run build",
+    "deploy": "aws s3 sync --delete dist s3://jbrowse.org/demos/app-rsbuild/",
+    "postdeploy": "aws cloudfront create-invalidation --distribution-id E13LGELJOT4GQO --paths \"/demos/app-rsbuild/*\""
+  },
+  "dependencies": {
+    "@fontsource/roboto": "^5.0.2",
+    "@jbrowse/core": "^2.0.0",
+    "@jbrowse/react-app": "^2.0.0",
+    "@types/node": "^20.10.4",
+    "react": "^18.0.0",
+    "react-dom": "^18.0.0"
+  },
+  "devDependencies": {
+    "@types/react": "^18.2.43",
+    "@types/react-dom": "^18.0.9",
+    "@rsbuild/core": "1.0.1-rc.3",
+    "@rsbuild/plugin-react": "1.0.1-rc.3",
+    "@rsbuild/plugin-node-polyfill": "^1.0.4",
+    "buffer": "^6.0.3",
+    "prettier": "^3.2.5",
+    "typescript": "^5.3.3"
+  }
+}
