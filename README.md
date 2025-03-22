@@ -1,9 +1,7 @@
-# rsbuild with @jbrowse/react-app
+# rsbuild with @jbrowse/react-app2
 
-This is a demo of using the @jbrowse/react-app NPM package with rsbuild (see
+This is a demo of using the @jbrowse/react-app2 NPM package with rsbuild (see
 https://rsbuildjs.dev/)
-
-## Demo of `@jbrowse/react-app` with rsbuild
 
 See this app running at https://jbrowse.org/demos/app-rsbuild/.
 

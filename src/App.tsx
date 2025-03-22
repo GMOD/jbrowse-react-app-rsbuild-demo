@@ -1,5 +1,5 @@
-import React, { useState, useEffect } from 'react'
-import { createViewState, JBrowseApp } from '@jbrowse/react-app'
+import { useState, useEffect } from 'react'
+import { createViewState, JBrowseApp } from '@jbrowse/react-app2'
 import '@fontsource/roboto'
 
 import config from './config'
