@@ -9,4 +9,11 @@ export default defineConfig({
   html: {
     title: '@jbrowse/react-app rsbuild demo',
   },
+  source: {
+    // Add fallbacks for Node.js built-in modules
+    alias: {
+      // Set fs module to false in browser environment
+      fs: false,
+    },
+  },
 })

@@ -14,20 +14,6 @@ function View() {
     const state = createViewState({
       config: {
         ...config,
-
-        // remove this and the makeWorkerInstance if you do not want to use web
-        // workers
-        configuration: {
-          rpc: {
-            defaultDriver: 'WebWorkerRpcDriver',
-          },
-        },
-      },
-
-      makeWorkerInstance: () => {
-        return new Worker(new URL('./rpcWorker', import.meta.url), {
-          type: 'module',
-        })
       },
     })
     setViewState(state)
