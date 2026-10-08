@@ -7,9 +7,7 @@
     "dev": "rsbuild dev --open",
     "build": "rsbuild build",
     "preview": "rsbuild preview",
-    "predeploy": "npm run build",
-    "deploy": "aws s3 sync --delete dist s3://jbrowse.org/demos/app-rsbuild/",
-    "postdeploy": "AWS_PAGER=\"\" aws cloudfront  create-invalidation --distribution-id E13LGELJOT4GQO --paths \"/demos/app-rsbuild/*\""
+    "deploy": "pnpm build && aws s3 sync --delete dist s3://jbrowse.org/demos/app-rsbuild/ && AWS_PAGER=\"\" aws cloudfront create-invalidation --distribution-id E13LGELJOT4GQO --paths \"/demos/app-rsbuild/*\""
   },
   "dependencies": {
     "@fontsource/roboto": "^5.2.9",
@@ -27,5 +25,6 @@
     "buffer": "^6.0.3",
     "prettier": "^3.8.0",
     "typescript": "^5.3.3"
-  }
+  },
+  "packageManager": "pnpm@11.18.0"
 }
